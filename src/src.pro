@@ -24,8 +24,12 @@ PRIVATE_HEADERS += $$QHTTPSERVER_BASE/http-parser/http_parser.h qhttpconnection.
 
 PUBLIC_HEADERS += qhttpserver.h qhttprequest.h qhttpresponse.h qhttpserverapi.h qhttpserverfwd.h
 
-HEADERS = $$PRIVATE_HEADERS $$PUBLIC_HEADERS
-SOURCES = *.cpp $$QHTTPSERVER_BASE/http-parser/http_parser.c
+HEADERS = $$PRIVATE_HEADERS $$PUBLIC_HEADERS \
+    sslserver.h \
+    qhttpsserver.h
+SOURCES = *.cpp $$QHTTPSERVER_BASE/http-parser/http_parser.c \
+    sslserver.cpp \
+    qhttpsserver.cpp
 
 OBJECTS_DIR = $$QHTTPSERVER_BASE/build
 MOC_DIR = $$QHTTPSERVER_BASE/build

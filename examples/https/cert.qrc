@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="localhost.key">certificates/localhost.key</file>
+        <file alias="localhost.pem">certificates/localhost.pem</file>
+    </qresource>
+</RCC>

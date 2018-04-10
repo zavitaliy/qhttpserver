@@ -71,7 +71,7 @@ public:
         @param port Port number on which the server should run.
         @return True if the server was started successfully, false otherwise.
         @sa listen(quint16) */
-    bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 80);
+    virtual bool listen(const QHostAddress &address = QHostAddress::Any, quint16 port = 80);
 
     /// Starts the server on @c port listening on all interfaces.
     /** @param port Port number on which the server should run.
@@ -92,7 +92,7 @@ Q_SIGNALS:
 private Q_SLOTS:
     void newConnection();
 
-private:
+protected:
     QTcpServer *m_tcpServer;
 };
 
